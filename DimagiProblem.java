@@ -17,7 +17,7 @@ public class DimagiProblem {
 		if (input < 20) return firstTwenty[(int) input];
 		String sequence = Long.toString(input);
 		StringBuilder sb = new StringBuilder();
-		boolean threeConsecZeroes = false;					// used to keep track of zeroes such as the middle three in 6,000,000, so we don't add the word "thousand"
+		boolean threeConsecZeroes = false;		   // used to keep track of zeroes such as the middle three in 6,000,000, so we don't add the word "thousand"
 
 		for (int i = 0; i < sequence.length(); i++) {
 			int decimalPos = sequence.length() - i - 1;
@@ -56,11 +56,6 @@ public class DimagiProblem {
 		}
 		return sb.toString().trim();
 	}
-	public static void main(String[] args){
-		DimagiProblem d = new DimagiProblem();
-		System.out.println(d.intToSpoken(Long.MAX_VALUE));
-	}
-	
 
 	
 }
